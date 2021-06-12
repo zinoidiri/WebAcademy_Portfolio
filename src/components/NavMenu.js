@@ -1,14 +1,27 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+
+const NavMenuStyles = styled.div;
+// background-color: red;
 
 export default function NavMenu() {
-    return (
-        <div>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contact</li>
-            </ul>
-        </div>
-    )
+  return (
+    <NavMenuStyles>
+      <ul>
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
+        <li>
+          <NavLink to="/projects">Projects</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact">Contact</NavLink>
+        </li>
+      </ul>
+    </NavMenuStyles>
+  );
 }
